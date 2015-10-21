@@ -1,0 +1,62 @@
+{
+	"name": "moc/pfu-base-distribution",
+	"description" : "Neos Base Distribution for the PFU website",
+	"authors": [{
+		"name": "Mathias Jahn-Nielsen",
+		"email": "mathias@moc.net",
+		"role": "Developer"
+	}],
+	"license": "GPL-3.0+",
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "http://packages.moc.net/"
+		},
+		{
+			"type": "git",
+			"url": "ssh://git@git.moc.net/Flow/Packages/MOC.Pivot.git"
+		}
+	],
+	"config": {
+		"vendor-dir": "Packages/Libraries",
+		"bin-dir": "bin"
+	},
+	"require": {
+		"typo3/neos": "2.0",
+		"typo3/neos-nodetypes": "2.0",
+		"doctrine/migrations": "@dev",
+		"typo3/swiftmailer": "*@dev",
+		"networkteam/neos-mailobfuscator": "1.0.*",
+		"moc/pivot": "1.0.*",
+		"typo3/neos-seo": "~1.0",
+		"typo3/imagine": "~2.0",
+		"typo3/twitter-bootstrap": "~2.0",
+		"typo3/form": "~2.0",
+		"typo3/setup": "~2.0",
+		"typo3/typo3cr": "2.0",
+		"typo3/typoscript": "2.0",
+		"typo3/media": "2.0",
+		"typo3/flow": "3.0",
+		"typo3/fluid": "3.0",
+		"typo3/eel": "3.0",
+		"typo3/party": "3.0",
+		"typo3/kickstart": "3.0",
+		"typo3/neos-kickstarter": "2.0"
+	},
+	"require-dev": {
+		"typo3/buildessentials": "3.0",
+		"mikey179/vfsstream": "1.4.*",
+		"phpunit/phpunit": "4.3.*",
+		"flowpack/behat": "dev-master",
+		"typo3/surf": "dev-master"
+	},
+	"suggest": {
+		"ext-pdo_sqlite": "For running functional tests out-of-the-box this is required"
+	},
+	"scripts": {
+		"post-update-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+		"post-install-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+		"post-package-update":"TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+		"post-package-install":"TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+	}
+}

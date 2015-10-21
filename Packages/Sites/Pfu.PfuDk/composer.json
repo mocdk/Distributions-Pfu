@@ -1,0 +1,12 @@
+{
+    "name": "pfu/pfudk",
+    "type": "typo3-flow-site",
+    "require": {
+        "moc/pivot": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Pfu\\PfuDk": "Classes"
+        }
+    }
+}
